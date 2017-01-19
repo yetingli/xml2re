@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<framework>
+  <processers>
+    <processer name="AProcesser" file="lib64/A.so" path="/tmp"/>
+    <processer name="BProcesser" file="lib64/B.so" value="fordelete"/>
+    <processer name="BProcesser" file="lib64/B.so2222222"/>
+    <services>
+      <service name="search" prefix="/bin/search?" output_formatter="OutPutFormatter:service_inc">
+        <chain sequency="chain1"/>
+        <chain sequency="chain2"/>
+      </service>
+      <service name="update" prefix="/bin/update?">
+        <chain sequency="chain3" value="fordelete"/>
+      </service>
+    </services>
+  </processers>
+</framework>
